@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Programming Hub</title>
+    <style type="text/css">
+      .h4 {
+        color: #ffffff;
+      }
+
+      p {
+        margin-left: 20px;
+        color: #eb8c44;
+      }
+
+      h1 {
+        color: #ff003f;
+      }
+
+      h2 {
+        color: #ffffff;
+        font-weight: bold;
+        width: 100%;
+        height: auto;
+        display: inline-block;
+      }
+
+      .body {
+        background-color: #2c2c33;
+        font-family: calibri;
+      }
+
+      #wrapper {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+      }
+
+      .header {
+        overflow: hidden;
+        background-color: #f1f1f1;
+        padding: 20px 10px;
+        width: 97vw;
+        height: 60px;
+        position: fixed;
+      }
+
+      .header a {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 22px;
+        line-height: 22px;
+        border-radius: 10px;
+      }
+
+      .header a.logo {
+        font-size: 25px;
+        font-weight: bold;
+      }
+
+      .header a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      .header a.active {
+        background-color: dodgerblue;
+        color: white;
+      }
+
+      .header-right {
+        float: right;
+        margin-top: 8px;
+      }
+
+      @media screen and (max-width: 500px) {
+        .header a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+
+        .header-right {
+          float: none;
+        }
+
+        .header {
+          height: auto;
+        }
+      }
+
+      .ul {
+        list-style-type: none;
+        padding: 0;
+        width: 15%;
+        background-color: #f1f1f1;
+        position: fixed;
+        height: 100vw;
+        overflow: hidden;
+        margin-top: 100px;
+      }
+
+      .ul li a {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+
+      .ul li a:hover:not(.active) {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      .ul li a:focus {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      .ul li a:active {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      .ol {
+        list-style-type: disc;
+        color: white;
+      }
+
+      pre {
+        padding: 5px;
+        margin-top: -5px;
+        border: 1px solid #d6d6d6 !important;
+        width: 500px;
+        color: blac;
+        background-color: white;
+        margin-left: 25px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <div id="wrapper">
+    <body class="body">
+      <div class="header">
+        <a href="Main.html" class="logo"
+          ><img src="pngguru.com.png" width="100px" height="50px"
+        /></a>
+        <div class="header-right">
+          <a href="Main.html">Home</a>
+          <a href="CS%20Overview.html">C# Overview</a>
+          <a class="active" href="CS%20Structure.html">C# Structure</a>
+          <a href="Basic%20Syntax.html">C# Basic Syntax</a>
+          <a href="Data Types.html">C# Data Types</a>
+        </div>
+      </div>
+
+      <ul class="ul">
+        <li><a href="#creating">Creating Hello World Program</a></li>
+        <li><a href="#compiling">Compiling and Executing the Program</a></li>
+      </ul>
+      <div
+        style="
+          margin-left: 15%;
+          padding: 1px 16px;
+          width: 50vw;
+          padding-top: 100px;
+        "
+      >
+        <h1>C# Structure</h1>
+        <h2 id="creating">Creating Hello World Program</h2>
+        <p>A C# program consists of the following parts −</p>
+        <ol class="ol">
+          <li>Namespace declaration</li>
+          <li>A class</li>
+          <li>Class methods</li>
+          <li>Class attributes</li>
+          <li>A Main method</li>
+          <li>Statements and Expressions</li>
+          <li>Comments</li>
+        </ol>
+        <p>
+          Let us look at a simple code that prints the words "Hello World" −
+        </p>
+        <pre class="pre">
+using System;
+
+namespace HelloWorldApplication {
+   
+   class HelloWorld {
+      
+      static void Main(string[] args) {
+         /* my first program in C# */
+         Console.WriteLine("Hello World");
+         Console.ReadKey();
+      }
+   }
+}</pre
+        >
+        <p>
+          When this code is compiled and executed, it produces the following
+          result −
+        </p>
+        <pre>Hello World</pre>
+        <p>Let us look at the various parts of the given program −</p>
+        <ol class="ol">
+          <li>
+            The first line of the program using System; - the using keyword is
+            used to include the System namespace in the program. A program
+            generally has multiple using statements.
+          </li>
+          <li>
+            The next line has the namespace declaration. A namespace is a
+            collection of classes. The HelloWorldApplication namespace contains
+            the class HelloWorld.
+          </li>
+          <li>
+            The next line has a class declaration, the class HelloWorld contains
+            the data and method definitions that your program uses. Classes
+            generally contain multiple methods. Methods define the behavior of
+            the class. However, the HelloWorld class has only one method Main.
+          </li>
+          <li>
+            The next line defines the Main method, which is the entry point for
+            all C# programs. The Main method states what the class does when
+            executed.
+          </li>
+          <li>
+            The next line /*...*/ is ignored by the compiler and it is put to
+            add comments in the program.
+          </li>
+          <li>
+            The Main method specifies its behavior with the statement
+            Console.WriteLine("Hello World"); WriteLine is a method of the
+            Console class defined in the System namespace. This statement causes
+            the message "Hello, World!" to be displayed on the screen.
+          </li>
+          <li>
+            The last line Console.ReadKey(); is for the VS.NET Users. This makes
+            the program wait for a key press and it prevents the screen from
+            running and closing quickly when the program is launched from Visual
+            Studio .NET.
+          </li>
+        </ol>
+        <p>It is worth to note the following points −</p>
+        <ul class="ol">
+          <li>C# is case sensitive.</li>
+          <li>All statements and expression must end with a semicolon (;).</li>
+          <li>The program execution starts at the Main method.</li>
+          <li>
+            Unlike Java, program file name could be different from the class
+            name.
+          </li>
+        </ul>
+        <h2 id="compiling">Compiling and Executing the Program</h2>
+        <p>
+          If you are using Visual Studio.Net for compiling and executing C#
+          programs, take the following steps −
+        </p>
+        <ul class="ol">
+          <li>Start Visual Studio.</li>
+          <li>On the menu bar, choose File -> New -> Project.</li>
+          <li>Choose Visual C# from templates, and then choose Windows.</li>
+          <li>Choose Console Application.</li>
+          <li>Specify a name for your project and click OK button.</li>
+          <li>This creates a new project in Solution Explorer.</li>
+          <li>Write code in the Code Editor.</li>
+          <li>
+            Click the Run button or press F5 key to execute the project. A
+            Command Prompt window appears that contains the line Hello World.
+          </li>
+        </ul>
+        <p>
+          You can compile a C# program by using the command-line instead of the
+          Visual Studio IDE −
+        </p>
+        <ul class="ol">
+          <li>Open a text editor and add the above-mentioned code.</li>
+          <li>Save the file as helloworld.cs</li>
+          <li>
+            Open the command prompt tool and go to the directory where you saved
+            the file.
+          </li>
+          <li>Type csc helloworld.cs and press enter to compile your code.</li>
+          <li>
+            If there are no errors in your code, the command prompt takes you to
+            the next line and generates helloworld.exe executable file.
+          </li>
+          <li>Type helloworld to execute your program.</li>
+          <li>You can see the output Hello World printed on the screen.</li>
+        </ul>
+      </div>
+    </body>
+  </div>
+</html>
